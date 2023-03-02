@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { Post.create(author: User.create(name: 'pepe', photo: 'pepe@hotmail.com', bio: 'Un malandro', posts_counter: 0), title: 'post1', text: 'text1', comments_counter: 0, likes_counter: 0) }
-  
-  
+  subject do
+    Post.create(author: User.create(name: 'pepe', photo: 'pepe@hotmail.com', bio: 'Un malandro', posts_counter: 0),
+                title: 'post1', text: 'text1', comments_counter: 0, likes_counter: 0)
+  end
+
   it 'post should be valid' do
     expect(subject).to be_valid
   end
