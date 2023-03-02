@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject { User.create(name: 'pepe', photo: 'pepe@hotmail.com', bio: 'Un malandro', posts_counter: 0) }
  
-  it 'Subject should be valid' do
+  it 'user should be valid' do
     expect(subject).to be_valid
   end
 
