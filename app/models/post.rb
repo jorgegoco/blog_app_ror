@@ -9,7 +9,7 @@ class Post < ApplicationRecord
 
   before_validation :set_comments_counter_to_zero, :set_likes_counter_to_zero
 
-  after_save :update_posts_counter
+  after_validation :update_posts_counter
 
   def update_posts_counter
     author.increment!(:posts_counter)
