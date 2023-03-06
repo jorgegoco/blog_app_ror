@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  def show 
-    puts params
+  def index 
+    @users = User.all
   end
 end
