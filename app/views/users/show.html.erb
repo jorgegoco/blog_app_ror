@@ -1,1 +1,24 @@
-<h1>Here is a list of posts for a particular user</h1>
+<% if @user.nil? %>
+<p>user not found</p>
+<% else %>
+<table>
+<tr>
+  <td><%= @user.photo %></td>
+  <td><%= @user.name %></td>
+  <td><%= @user.posts_counter %></td> 
+</tr>
+</table>
+<br>
+Bio
+<p><%= @user.bio %></p>
+<table>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+      <td>Comments <%= post.comments_counter %></td>
+      <td>Likes <%= post.likes_counter %></td> 
+    </tr>
+  <% end %>
+</table>       
+<% end %>
