@@ -21,10 +21,12 @@
 }
 
  .user {
+  width: 70%;
+  margin: auto;
   padding-top: 50px;
   display : flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .user p {
@@ -33,15 +35,22 @@
 
 .bio {
   padding-top: 30px;
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 
 .post {
+  width: 70%;
+  margin: auto;
   padding: 20px 0;
 }
 
 .see-all-posts {
   padding-top: 20px;
   text-align: center;
+}
+
+.comment {
+  width: 70%;
+  margin: auto;
 }

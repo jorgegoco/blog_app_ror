@@ -5,8 +5,8 @@
 <div>
   <% @posts.each do |post| %>
     <%= render partial: "shared/post", locals: { post: post } %>
-      <div>
-        <% post.comments.each do |comment| %>
+      <div class="comment">
+        <% post.five_recent_comments.each do |comment| %>
           <p><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>
       </div>

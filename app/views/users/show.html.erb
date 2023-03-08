@@ -6,11 +6,10 @@
 <div class="bio">
   <h3>Bio</h3>
   <p><%= @user.bio %></p>
-<div>
-  <% @posts.each do |post| %>
-    <%= render partial: "shared/post", locals: { post: post } %>
-  <% end %>
 </div>
+<% @posts.each do |post| %>
+    <%= render partial: "shared/post", locals: { post: post } %>
+<% end %>
 <div class="see-all-posts"> 
   <button>See all post</button> 
 </div>       
