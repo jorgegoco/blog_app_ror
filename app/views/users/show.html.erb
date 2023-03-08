@@ -1,13 +1,7 @@
 <% if @user.nil? %>
 <p>user not found</p>
 <% else %>
-<table>
-<tr>
-  <td><%= @user.photo %></td>
-  <td><%= @user.name %></td>
-  <td><%= @user.posts_counter %></td> 
-</tr>
-</table>
+<%= render partial: "shared/user", locals: { user: @user } %>
 <br>
 Bio
 <p><%= @user.bio %></p>

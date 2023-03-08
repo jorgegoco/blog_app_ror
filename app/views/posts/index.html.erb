@@ -1,11 +1,7 @@
 <% if @user.nil? %>
 <p>user not found</p>
 <% else %>
-<div>
-  <p><%= @user.photo %></p>
-  <p><%= @user.name %></p>
-  <p><%= @user.posts_counter %></p> 
-</div>
+<%= render partial: "shared/user", locals: { user: @user } %>
 <div>
   <% @posts.each do |post| %>
       <p><%= post.title %></p>

@@ -1,9 +1,3 @@
-<table>
   <% @users.each do |user| %>
-    <tr>
-      <td><%= user.photo %></td>
-      <td><%= user.name %></td>
-      <td><%= user.posts_counter %></td> 
-    </tr>
-  <% end %>
-</table>       
+    <%= render partial: "shared/user", locals: { user: user } %>
+  <% end %>       
