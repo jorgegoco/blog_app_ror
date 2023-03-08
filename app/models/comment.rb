@@ -7,7 +7,4 @@ class Comment < ApplicationRecord
   def update_comments_counter
     post.increment!(:comments_counter)
   end
-  def comment_author
-    author.name
-  end
 end

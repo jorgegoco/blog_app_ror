@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by_id(params[:id])
+    @user = User.find_by_id(params[:user_id])
+    @post = Post.find_by_id(params[:id]) unless @user.nil?
+    @comments = @post.comments unless @post.nil?
   end
 end

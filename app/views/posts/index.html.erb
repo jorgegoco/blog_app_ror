@@ -14,7 +14,7 @@
       <div>Likes <%= post.likes_counter %></p> 
       <div>
         <% post.comments.each do |comment| %>
-        <p><%= comment.comment_author %></p>
+        <p><%= comment.author.name %></p>
         <p><%= comment.text %></p>
         <% end %>
       </div>
