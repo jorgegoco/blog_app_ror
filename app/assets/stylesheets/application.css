@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ .user {
+  padding-top: 100px;
+  display : flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.user p {
+  padding-top: 20px;
+}
