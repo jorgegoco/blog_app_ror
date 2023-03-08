@@ -5,6 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
-    @posts = @user.posts unless @user.nil?
+    @posts = @user.three_recent_posts unless @user.nil?
   end
 end

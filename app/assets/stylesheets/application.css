@@ -21,7 +21,7 @@
 }
 
  .user {
-  padding-top: 100px;
+  padding-top: 50px;
   display : flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -29,4 +29,19 @@
 
 .user p {
   padding-top: 20px;
+}
+
+.bio {
+  padding-top: 30px;
+  width: 60%;
+  margin: auto;
+}
+
+.post {
+  padding: 20px 0;
+}
+
+.see-all-posts {
+  padding-top: 20px;
+  text-align: center;
 }

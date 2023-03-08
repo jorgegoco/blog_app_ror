@@ -3,11 +3,15 @@
 <% else %>
 <%= render partial: "shared/user", locals: { user: @user } %>
 <br>
-Bio
-<p><%= @user.bio %></p>
+<div class="bio">
+  <h3>Bio</h3>
+  <p><%= @user.bio %></p>
 <div>
   <% @posts.each do |post| %>
     <%= render partial: "shared/post", locals: { post: post } %>
   <% end %>
+</div>
+<div class="see-all-posts"> 
+  <button>See all post</button> 
 </div>       
 <% end %>
