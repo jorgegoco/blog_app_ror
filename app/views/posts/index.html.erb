@@ -4,14 +4,10 @@
 <%= render partial: "shared/user", locals: { user: @user } %>
 <div>
   <% @posts.each do |post| %>
-      <p><%= post.title %></p>
-      <p><%= post.text %></p>
-      <p>Comments <%= post.comments_counter %></p>
-      <div>Likes <%= post.likes_counter %></p> 
+    <%= render partial: "shared/post", locals: { post: post } %>
       <div>
         <% post.comments.each do |comment| %>
-        <p><%= comment.author.name %></p>
-        <p><%= comment.text %></p>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>
       </div>
   <% end %>

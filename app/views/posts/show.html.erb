@@ -5,16 +5,10 @@
     <p>post not found for user: 
     <%= @user.name %></p>
   <% else %>
-  <p>Post <%= @post.title %> by <%= @user.name %></p>
-  <p><%= @post.comments_counter %></p>
-  <p><%= @post.likes_counter %></p>
-  <p><%= @post.text %>
-  <div>
-    <% @comments.each do |comment| %>
-        <p><%= comment.author.name %>
-        : <%= comment.text %>
-        </p>
-    <% end %>
-  </div>       
+    <p>Post <%= @post.title %> by <%= @user.name %></p>
+    <p><%= @post.comments_counter %></p>
+    <p><%= @post.likes_counter %></p>
+    <p><%= @post.text %></p>
+    <p><%= comment.author.name %>: <%= comment.text %></p>
   <% end %>  
 <% end %>
