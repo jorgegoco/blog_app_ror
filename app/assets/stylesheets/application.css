@@ -14,7 +14,7 @@
  *= require_self
  */
 
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,9 +25,9 @@ body {
   margin: auto;
 }
 
- .user {
+.user {
   padding-top: 50px;
-  display : flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
