@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @user = User.find_by_id(params[:user_id])
+    @posts = @user.posts unless @user.nil?
   end
 
   def show
