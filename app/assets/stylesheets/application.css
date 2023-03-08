@@ -20,9 +20,12 @@
   box-sizing: border-box;
 }
 
- .user {
+body {
   width: 70%;
   margin: auto;
+}
+
+ .user {
   padding-top: 50px;
   display : flex;
   flex-direction: row;
@@ -35,13 +38,9 @@
 
 .bio {
   padding-top: 30px;
-  width: 70%;
-  margin: auto;
 }
 
 .post {
-  width: 70%;
-  margin: auto;
   padding: 20px 0;
 }
 
@@ -50,7 +49,12 @@
   text-align: center;
 }
 
-.comment {
-  width: 70%;
-  margin: auto;
+.post-detail {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-detail-text {
+  padding: 50px 0;
 }
