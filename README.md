@@ -169,8 +169,8 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Add views**
 - [ ] **Add forms**
+- [ ] **Add integration specs**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

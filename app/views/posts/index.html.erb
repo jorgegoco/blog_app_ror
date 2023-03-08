@@ -1,1 +1,15 @@
-<h1>Here is a list of posts for a particular user</h1>
+<% if @user.nil? %>
+<p>user not found</p>
+<% else %>
+<%= render partial: "shared/user", locals: { user: @user } %>
+<div>
+  <% @posts.each do |post| %>
+    <%= render partial: "shared/post", locals: { post: post } %>
+      <div class="comment">
+        <% post.five_recent_comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+      </div>
+  <% end %>
+</div>       
+<% end %>
