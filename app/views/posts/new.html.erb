@@ -1,5 +1,17 @@
-<%= form_with model: @post do |form| %>
-  <%= form.text_field :title %>
-  <%= form.text_area :text %>
-  <%= form.submit "Create" %>
-<% end %>
+<div class="post-form">
+  <h1>New Post</h1>
+  <%= form_with model: post, url: user_posts_path, method: :post, local: true, scope: :post do |f| %>
+    <div>
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :text %>
+      <br>
+      <%= f.text_area :text %>
+    </div>
+    <%= f.submit "Add Post" %>
+  <% end %>
+</div>
+ 
