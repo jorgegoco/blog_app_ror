@@ -4,6 +4,14 @@ class PostsController < ApplicationController
     @posts = @user.posts unless @user.nil?
   end
 
+  def new
+    @user = current_user
+    @post = Post.new
+  end
+
+  def create
+  end
+
   def show
     @user = User.find_by_id(params[:user_id])
     @post = Post.find_by_id(params[:id]) unless @user.nil?
