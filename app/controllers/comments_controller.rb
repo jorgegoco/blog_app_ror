@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = Comment.new(params.require(:comment).permit(:text))
+    @comment = Comment.new(strong_params)
     @comment.post = @post
     @comment.author = current_user
     if @comment.save
@@ -16,5 +16,11 @@ class CommentsController < ApplicationController
     else
       render :new
     end
+  end
+
+  private
+
+  def strong_params
+    params.require(:comment).permit(:text)
   end
 end

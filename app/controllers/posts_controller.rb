@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params.require(:post).permit(:title, :text))
+    @post = Post.new(strong_params)
     @post.comments_counter = 0
     @post.likes_counter = 0
     @post.author = current_user
@@ -27,5 +27,11 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  private
+
+  def strong_params
+    params.require(:post).permit(:title, :text)
   end
 end
