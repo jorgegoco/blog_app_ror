@@ -10,6 +10,11 @@
     <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
     </div>
     <p class="post-detail-text"><%= @post.text %></p>
+    <br>
+    <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" do |f| %>
+      <%= f.submit 'Like' %>
+    <%end%>
+    <br>
     <div class="comment">
         <% @comments.each do |comment| %>
           <p><%= comment.author.name %>: <%= comment.text %></p>
