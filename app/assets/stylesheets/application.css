@@ -26,7 +26,7 @@ body {
 }
 
 .user {
-  padding-top: 50px;
+  padding-top: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,4 +67,14 @@ body {
 .comment-form {
   text-align: center;
   margin-top: 100px;
+}
+
+.user-detail-button {
+  padding: 5px;
+  width: 50px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }

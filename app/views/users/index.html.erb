@@ -1,3 +1,6 @@
   <% @users.each do |user| %>
     <%= render partial: "shared/user", locals: { user: user } %>
+    <%= link_to "/users/#{user.id}" do %>
+      <button class="user-detail-button">Detail</button>
+    <% end %>
   <% end %>       
