@@ -69,7 +69,7 @@ body {
   margin-top: 100px;
 }
 
-.user-detail-button {
+.user-detail-button, .users-back-button {
   padding: 5px;
   width: 50px;
   position: absolute;
@@ -77,4 +77,9 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
+}
+
+.users-back-button {
+  width: 150px;
+  margin-top: 20px;
 }
