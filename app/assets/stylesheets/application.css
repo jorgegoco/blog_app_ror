@@ -44,11 +44,6 @@ body {
   padding: 20px 0;
 }
 
-.see-all-posts {
-  padding-top: 20px;
-  text-align: center;
-}
-
 .post-detail {
   padding-top: 50px;
   display: flex;
@@ -69,7 +64,7 @@ body {
   margin-top: 100px;
 }
 
-.user-detail-button, .users-back-button {
+.user-detail-button, .users-back-button, .see-all-posts {
   padding: 5px;
   width: 50px;
   position: absolute;
@@ -79,7 +74,7 @@ body {
   right: 0;
 }
 
-.users-back-button {
+.users-back-button, .see-all-posts {
   width: 150px;
   margin-top: 20px;
 }
