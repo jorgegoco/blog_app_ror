@@ -1,6 +1,9 @@
 <% if @user.nil? %>
 <p>user not found</p>
 <% else %>
+<%= link_to "/users" do %>
+  <button class="users-back-button">Back to list of users</button>
+<% end %>
 <%= render partial: "shared/user", locals: { user: @user } %>
 <br>
 <div class="bio">
@@ -10,7 +13,7 @@
 <% @posts.each do |post| %>
     <%= render partial: "shared/post", locals: { post: post } %>
 <% end %>
-<div class="see-all-posts"> 
-  <button>See all post</button> 
-</div>       
+<%= link_to "/users/#{@user.id}/posts/" do %>
+  <button class="see-all-posts">See all post</button>
+<% end %>
 <% end %>

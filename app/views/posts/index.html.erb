@@ -1,3 +1,4 @@
+<%= link_to "Back", "/users/#{@user.id}/" %>
 <% if @user.nil? %>
 <p>user not found</p>
 <% else %>
@@ -10,6 +11,9 @@
           <p><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>
       </div>
+      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+        <button class="post-detail-button">Detail</button>
+      <% end %>
   <% end %>
 </div>       
 <% end %>

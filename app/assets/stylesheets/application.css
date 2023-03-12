@@ -26,7 +26,7 @@ body {
 }
 
 .user {
-  padding-top: 50px;
+  padding-top: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,11 +42,6 @@ body {
 
 .post {
   padding: 20px 0;
-}
-
-.see-all-posts {
-  padding-top: 20px;
-  text-align: center;
 }
 
 .post-detail {
@@ -67,4 +62,28 @@ body {
 .comment-form {
   text-align: center;
   margin-top: 100px;
+}
+
+.user-detail-button,
+.users-back-button,
+.see-all-posts {
+  padding: 5px;
+  width: 50px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.users-back-button,
+.see-all-posts {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.post-detail-button {
+  margin-top: 20px;
+  padding: 5px;
+  width: 50px;
 }
