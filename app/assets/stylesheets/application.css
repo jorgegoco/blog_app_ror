@@ -78,3 +78,9 @@ body {
   width: 150px;
   margin-top: 20px;
 }
+
+.post-detail-button {
+  margin-top: 20px;
+  padding: 5px;
+  width: 50px;
+}
