@@ -38,7 +38,7 @@ RSpec.describe 'users#show', type: :feature do
       expect(page).to have_link('See all posts') 
     end
 
-    scenario 'When I click to see all posts, it redirects me to the users posts index page.' do
+    scenario "When I click to see all posts, it redirects me to the user's posts index page" do
       click_link 'See all posts'
       expect(page).to have_current_path("/users/#{@user1.id}/posts/")
     end
