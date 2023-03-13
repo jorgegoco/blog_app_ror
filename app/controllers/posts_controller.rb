@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def show
     @user = User.find_by_id(params[:user_id])
     @post = Post.find_by_id(params[:id]) unless @user.nil?
-    @comments = @post.comments unless @post.nil?
+    @comments = @post.comments.includes(:author) unless @post.nil?
   end
 
   def create

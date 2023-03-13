@@ -12,8 +12,11 @@
 </div>
 <% @posts.each do |post| %>
     <%= render partial: "shared/post", locals: { post: post } %>
+    <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+        <button class="post-detail-button">Detail</button>
+    <% end %>
 <% end %>
 <%= link_to "/users/#{@user.id}/posts/" do %>
-  <button class="see-all-posts">See all post</button>
+  <button class="see-all-posts">See all posts</button>
 <% end %>
 <% end %>
