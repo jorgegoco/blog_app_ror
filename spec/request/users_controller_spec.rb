@@ -15,7 +15,7 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'assert the content of the response body matches the placeholder text' do
-      expect(response.body).to include('<h1>Here is a list of users</h1>')
+      expect(response.body).to include('<h1>Users</h1>')
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'assert the content of the response body matches the placeholder text' do
-      expect(response.body).to include('<h1>Here is a list of users</h1>')
+      expect(response.body).to include('<h1>Users</h1>')
     end
   end
 
@@ -51,7 +51,7 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'assert the content of the response body matches the placeholder text' do
-      expect(response.body).to include('<h1>Here is a list of posts for a particular user</h1>')
+      expect(response.body).to include('<p>user not found</p>' || '<h3>Bio</h3>')
     end
   end
 end
