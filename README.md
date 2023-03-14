@@ -163,7 +163,12 @@ Example:
 - Twitter: [@twitterhandle](https://twitter.com/JorgeGo78017548)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorgegoco/)
 
- 👤 **Jerome**
+👤 **Kibrewossen Y Mekasha**
+
+- GitHub: [@akos29](https://github.com/akos29)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kibrewossen-y-mekasha/)
+
+👤 **Jerome**
 
 - GitHub: [@githubhandle](https://github.com/187jjay187)
 - Twitter: [@twitterhandle](https://twitter.com/187jjay187)
@@ -173,8 +178,8 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Add forms**
-- [ ] **Add integration specs**
+- [ ] **Authentication with Devise gem**
+- [ ] **Add authorization rules**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
