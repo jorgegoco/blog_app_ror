@@ -163,6 +163,8 @@ Example:
 - Twitter: [@twitterhandle](https://twitter.com/JorgeGo78017548)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorgegoco/)
 
+ 👤 **Jerome**
+
 
 👤 **Kibrewossen Y Mekasha**
 
