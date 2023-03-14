@@ -164,6 +164,10 @@ Example:
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorgegoco/)
 
 
+👤 **Kibrewossen Y Mekasha**
+
+- GitHub: [@akos29](https://github.com/akos29)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kibrewossen-y-mekasha/)
 
 
 ## 🔭 Future Features <a name="future-features"></a>
