@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @user = User.find_by_id(params[:user_id])
     @post = @user.posts.includes(:comments).find_by_id(params[:id]) unless @user.nil?
     @comments = @post.comments.includes(:author) unless @post.nil?
-  end 
+  end
 
   def create
     @post = Post.new(strong_params)
@@ -30,8 +30,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @user = User.find_by_id(params[:user_id])
-    @post = @user.posts.find_by_id(params[:id]) 
+    @post = Post.find_by_id(params[:id])
     @post.destroy
     redirect_to user_posts_path(current_user)
   end
