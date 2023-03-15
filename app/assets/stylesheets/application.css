@@ -87,3 +87,33 @@ body {
   padding: 5px;
   width: 50px;
 }
+
+.log-in-container, .sign-up-container, .forgot-password-container {
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  width: 40%;
+  border: 1px solid black;
+  box-shadow: 5px 10px;
+}
+.field {
+  margin: 20px 0;
+}
+
+.actions {
+  margin: 20px 0;
+}
+
+.button-log-in, .button-sign-up, .button-password {
+  padding: 5px;
+  background-color: rgb(127, 210, 127);
+}
+
+.link-log-in, .link-sign-up, .link-forgot-password, .link-confirmation {
+  color: black;
+}
+
+.inner-field {
+  width: 90%;
+}
