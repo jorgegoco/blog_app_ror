@@ -110,7 +110,7 @@ body {
   background-color: rgb(127, 210, 127);
 }
 
-.link-log-in, .link-sign-up, .link-forgot-password {
+.link-log-in, .link-sign-up, .link-forgot-password, .link-confirmation {
   color: black;
 }
 
