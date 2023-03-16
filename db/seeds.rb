@@ -12,8 +12,8 @@ Post.destroy_all
 User.destroy_all
 
 
-user1 = User.create!(name: 'Pepe', photo: 'https://pepe', email: 'test1@gmail.com', bio: 'nobio', password: '123123')
-user2 = User.create!(name: 'Pótamo', photo: 'https://pótamo', email: 'test2@gmail.com', bio: 'some', password: '456456')
+user1 = User.create!(name: 'Pepe', photo: 'https://pepe', email: 'test1@gmail.com', bio: 'nobio', password: '123123', role: 'admin')
+user2 = User.create!(name: 'Pótamo', photo: 'https://pótamo', email: 'test2@gmail.com', bio: 'some', password: '456456', role: 'admin')
 post1 = user1.posts.create!(title: 'Pepe1 Post', text: 'Pepe1 text')
 post2 = user1.posts.create!(title: 'Pepe2 Post', text: 'Pepe2 text')
 post3 = user1.posts.create!(title: 'Pepe3 Post', text: 'Pepe3 text')
