@@ -19,7 +19,17 @@
     <div class="comment">
         <% @comments.each do |comment| %>
           <p><%= comment.author.name %>: <%= comment.text %></p>
+          <% if can? :destroy, comment %>
+          <%= link_to "Delete", user_post_path(@post.author.id, @post.id), data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+          }, class: "delete-comment-button"
+          %>
+      <% end %>
         <% end %>
-      </div>
+    </div>
+    <% if can? :destroy, @post %> 
+    <%= button_to "Delete Post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false }, class: "delete-post-button"%>
+  <% end %>
   <% end %>  
 <% end %>

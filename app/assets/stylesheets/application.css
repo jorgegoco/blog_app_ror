@@ -105,9 +105,15 @@ body {
   margin: 20px 0;
 }
 
-.button-log-in, .button-sign-up, .button-password {
+.button-log-in, .button-sign-up, .button-password, .new-post-detail-button {
   padding: 5px;
   background-color: rgb(127, 210, 127);
+}
+
+.new-post-detail-button {
+  margin-top: 20px;
+  position: relative;
+  left: 50%;
 }
 
 .link-log-in, .link-sign-up, .link-forgot-password, .link-confirmation {
@@ -116,4 +122,10 @@ body {
 
 .inner-field {
   width: 90%;
+}
+
+.delete-post-button, .delete-comment-button {
+  margin-top: 50px;
+  padding: 5px;
+  color: red;
 }

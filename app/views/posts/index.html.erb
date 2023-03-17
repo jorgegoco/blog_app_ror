@@ -14,11 +14,9 @@
       <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
         <button class="post-detail-button">Detail</button>
       <% end %>
-      <% if can? :delete, @post %>
-        <%= link_to  do %>
-          <button class="post-delete-button">Delete</button>
-        <% end %>
-      <% end %>
   <% end %>
-</div>        
+</div> 
+<%= link_to new_user_post_path do %>
+  <button class="new-post-detail-button">New Post</button>
+<% end %>       
 <% end %>
