@@ -12,6 +12,7 @@ Post.destroy_all
 User.destroy_all
 
 
+user1 = User.create!(name: 'Tip', photo: 'https://tip', email: 'tip@gmail.com', bio: 'long', password: 'long123')
 user1 = User.create!(name: 'Pepe', photo: 'https://pepe', email: 'test1@gmail.com', bio: 'nobio', password: '123123')
 user2 = User.create!(name: 'Pótamo', photo: 'https://pótamo', email: 'test2@gmail.com', bio: 'some', password: '456456')
 post1 = user1.posts.create!(title: 'Pepe1 Post', text: 'Pepe1 text')

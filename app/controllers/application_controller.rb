@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :photo, :bio, :email, :password, :current_password)
     end
   end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, alert: exception.message
+  end
 end
