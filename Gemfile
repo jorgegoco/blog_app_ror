@@ -35,6 +35,9 @@ gem 'devise'
 # Cancan authorization
 gem 'cancancan'
 
+# API documentation
+gem 'rswag'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -61,6 +64,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'rswag-specs'
 end
 
 group :development do
