@@ -76,8 +76,7 @@ body {
 }
 
 .user-detail-button,
-.users-back-button,
-.see-all-posts {
+.users-back-button {
   padding: 5px;
   width: 50px;
   position: absolute;
@@ -93,25 +92,34 @@ body {
 
 .see-all-posts {
   display: block;
+  padding: 5px;
+  width: 50px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 20px;
+  background-color: rgb(163, 184, 163);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 1s;
 }
 
 .users-back-button {
+  width: 150px;
   margin-top: 20px;
   position: relative;
   left: 50%;
 }
 
-.user-detail-button:hover,.users-back-button:hover,.see-all-posts:hover {
+.user-detail-button:hover,
+.users-back-button:hover,
+.see-all-posts:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
   color: #1d6346;
   transform: scale(1.2);
-}
-
-.users-back-button,
-.see-all-posts {
-  width: 150px;
-  margin-top: 20px;
 }
 
 .post-detail-button {
@@ -131,7 +139,9 @@ body {
   transform: scale(1.2);
 }
 
-.log-in-container, .sign-up-container, .forgot-password-container {
+.log-in-container,
+.sign-up-container,
+.forgot-password-container {
   margin: auto;
   margin-top: 50px;
   padding: 20px;
@@ -140,6 +150,7 @@ body {
   border: 1px solid black;
   box-shadow: 5px 10px;
 }
+
 .field {
   margin: 20px 0;
 }
@@ -148,19 +159,15 @@ body {
   margin: 20px 0;
 }
 
-.button-log-in, .button-sign-up, .button-password, .new-post-detail-button {
+.button-log-in,
+.button-sign-up,
+.button-password,
+.new-post-detail-button {
   padding: 5px;
   background-color: rgb(127, 210, 127);
   border-radius: 4px;
   cursor: pointer;
   transition: transform 1s;
-}
-
-.button-log-in:hover, .button-sign-up:hover, .button-password:hover, .new-post-detail-button:hover {
-  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
-  background: white;
-  color: #1d6346;
-  transform: scale(1.2);
 }
 
 .new-post-detail-button {
@@ -169,7 +176,20 @@ body {
   left: 50%;
 }
 
-.link-log-in, .link-sign-up, .link-forgot-password, .link-confirmation {
+.button-log-in:hover,
+.button-sign-up:hover,
+.button-password:hover,
+.new-post-detail-button:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
+}
+
+.link-log-in,
+.link-sign-up,
+.link-forgot-password,
+.link-confirmation {
   color: black;
 }
 
@@ -177,7 +197,8 @@ body {
   width: 90%;
 }
 
-.delete-post-button, .delete-comment-button {
+.delete-post-button,
+.delete-comment-button {
   margin-top: 50px;
   padding: 5px;
   color: red;
