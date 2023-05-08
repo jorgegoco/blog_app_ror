@@ -85,10 +85,20 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  background-color: rgb(194, 199, 194);
+  background-color: rgb(163, 184, 163);
   border-radius: 4px;
   cursor: pointer;
   transition: transform 1s;
+}
+
+.see-all-posts {
+  display: block;
+}
+
+.users-back-button {
+  margin-top: 20px;
+  position: relative;
+  left: 50%;
 }
 
 .user-detail-button:hover,.users-back-button:hover,.see-all-posts:hover {
@@ -108,6 +118,17 @@ body {
   margin-top: 20px;
   padding: 5px;
   width: 50px;
+  background-color: rgb(163, 184, 163);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.post-detail-button:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
 }
 
 .log-in-container, .sign-up-container, .forgot-password-container {
