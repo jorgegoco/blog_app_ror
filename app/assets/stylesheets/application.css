@@ -108,6 +108,16 @@ body {
 .button-log-in, .button-sign-up, .button-password, .new-post-detail-button {
   padding: 5px;
   background-color: rgb(127, 210, 127);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.button-log-in:hover, .button-sign-up:hover, .button-password:hover, .new-post-detail-button:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
 }
 
 .new-post-detail-button {
