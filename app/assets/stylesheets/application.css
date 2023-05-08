@@ -21,15 +21,26 @@
 }
 
 body {
-  width: 70%;
+  width: 85%;
   margin: auto;
 }
 
+.users-header {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 40px;
+}
+
 .user {
-  padding-top: 70px;
+  margin-top: 50px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.profile-img {
+  width: 200px;
+  height: 100px;
 }
 
 .user p {
@@ -74,6 +85,17 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
+  background-color: rgb(194, 199, 194);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.user-detail-button:hover,.users-back-button:hover,.see-all-posts:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
 }
 
 .users-back-button,
