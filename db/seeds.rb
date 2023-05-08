@@ -12,14 +12,14 @@ Post.destroy_all
 User.destroy_all
 
 
-user1 = User.create!(name: 'Tip', photo: 'https://tip', email: 'tip@gmail.com', bio: 'long', password: 'long123')
-user1 = User.create!(name: 'Pepe', photo: 'https://pepe', email: 'test1@gmail.com', bio: 'nobio', password: '123123')
-user2 = User.create!(name: 'Pótamo', photo: 'https://pótamo', email: 'test2@gmail.com', bio: 'some', password: '456456')
-post1 = user1.posts.create!(title: 'Pepe1 Post', text: 'Pepe1 text')
-post2 = user1.posts.create!(title: 'Pepe2 Post', text: 'Pepe2 text')
-post3 = user1.posts.create!(title: 'Pepe3 Post', text: 'Pepe3 text')
-post4 = user2.posts.create!(title: 'Pótamo1 Post', text: 'Pótamo1 text')
-post5 = user2.posts.create!(title: 'Pótamo2 Post', text: 'Pótamo2 text')
-post6 = user2.posts.create!(title: 'Pótamo3 Post', text: 'Pótamo3 text')
+user1 = User.create!(name: 'TipyColl  ', photo: 'https://agendacultural.castillalamancha.es/sites/agendacultural.castillalamancha.es/files/actividades/imagenes/tip_y_coll.png', email: 'tipycoll@gmail.com', bio: 'long', password: 'long123')
+user1 = User.create!(name: 'PepePotamo', photo: 'https://i.ytimg.com/vi/sN3R8bE_BDg/maxresdefault.jpg', email: 'pepepotamo@gmail.com', bio: 'nobio', password: '123123')
+user2 = User.create!(name: 'PapaPig', photo: 'https://pbs.twimg.com/media/EgRn5JSWAAMXOp9.jpg', email: 'papapig@gmail.com', bio: 'some', password: '456456')
+post1 = user1.posts.create!(title: 'First tipycoll post', text: 'First tipycoll post text')
+post2 = user1.posts.create!(title: 'Second tipycoll post', text: 'Second tipycoll post text')
+post3 = user1.posts.create!(title: 'Third tipycollpost', text: 'Third tipycoll post text')
+post4 = user2.posts.create!(title: 'First pepepotamo post', text: 'First pepepotamo post text')
+post5 = user2.posts.create!(title: 'Second pepepotamo post', text: 'Second pepepotamo post text')
+post6 = user2.posts.create!(title: 'Third pepepotamo post', text: 'Third pepepotamo post text')
 comment1 = post1.comments.create!(text: 'Hi there!', author: user2)
 comment2 = post1.comments.create!(text: 'Nice to hear from you again', author: user1)
