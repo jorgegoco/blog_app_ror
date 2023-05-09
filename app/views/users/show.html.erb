@@ -15,7 +15,7 @@
 
   <% @posts.each do |post| %>
     <%= render partial: "shared/post", locals: { post: post } %>
-    <%= link_to "/users/#{params[:id]}/posts/#{params[:post_id]}" do %>
+    <%= link_to user_post_path(params[:id], post) do %>
       <button class="post-detail-button">Detail</button>
     <% end %>
     <div class="dashed-line"></div>
