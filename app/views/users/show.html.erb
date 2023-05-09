@@ -1,22 +1,30 @@
 <% if @user.nil? %>
-<p>user not found</p>
+  <p>user not found</p>
 <% else %>
-<%= link_to "/users" do %>
-  <button class="users-back-button">Back to list of users</button>
-<% end %>
-<%= render partial: "shared/user", locals: { user: @user } %>
-<br>
-<div class="bio">
-  <h3>Bio</h3>
-  <p><%= @user.bio %></p>
-</div>
-<% @posts.each do |post| %>
+  <%= link_to "/users" do %>
+    <button class="users-back-button">Back to list of users</button>
+  <% end %>
+
+  <%= render partial: "shared/user", locals: { user: @user } %>
+
+  <br>
+  <div class="bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+
+  <% @posts.each do |post| %>
     <%= render partial: "shared/post", locals: { post: post } %>
-    <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
-        <button class="post-detail-button">Detail</button>
+    <%= link_to user_post_path(params[:id], post) do %>
+      <button class="post-detail-button">Detail</button>
     <% end %>
-<% end %>
-<%= link_to "/users/#{@user.id}/posts/" do %>
-  <button class="see-all-posts">See all posts</button>
-<% end %>
+    <div class="dashed-line"></div>
+  <% end %>
+
+  <div class="post-detail">
+    <%= link_to "/users/#{@user.id}/posts/" do %>
+      <button class="see-all-posts">See all posts</button>
+    <% end %>
+  </div>
+
 <% end %>

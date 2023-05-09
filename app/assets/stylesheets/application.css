@@ -27,38 +27,74 @@ body {
 
 .users-header {
   text-align: center;
-  padding-top: 50px;
+  margin: 20px 0 75px 0;
   font-size: 40px;
 }
 
 .user {
-  margin-top: 50px;
+  margin-left: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  column-gap: 100px;
 }
 
 .profile-img {
   width: 200px;
   height: 100px;
+  border: 1px solid black;
+  box-shadow: 5px 10px;
 }
 
 .user p {
-  padding-top: 20px;
+  margin-left: auto;
+  margin-right: 200px;
+}
+
+.user-detail-button,
+.post-detail-button {
+  padding: 5px;
+  width: 50px;
+  margin: 50px 0 50px 100px;
+  background-color: rgb(163, 184, 163);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.post-detail-button {
+  margin: 10px 0 0 0;
 }
 
 .bio {
-  padding-top: 30px;
+  margin: 30px 0;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
 .post {
   padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+
+.commentsandlikes {
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .post-detail {
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
+}
+
+.dashed-line {
+  border-bottom: 1px dashed black;
+  margin: 10px 0;
 }
 
 .post-detail-text {
@@ -75,63 +111,20 @@ body {
   margin-top: 100px;
 }
 
-.user-detail-button,
-.users-back-button {
-  padding: 5px;
-  width: 50px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  background-color: rgb(163, 184, 163);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 1s;
-}
-
+.users-back-button,
 .see-all-posts {
-  display: block;
+  margin: 20px 0 50px 0;
   padding: 5px;
-  width: 50px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  margin-top: 20px;
+  width: 150px;
   background-color: rgb(163, 184, 163);
   border-radius: 4px;
   cursor: pointer;
   transition: transform 1s;
-}
-
-.users-back-button {
-  width: 150px;
-  margin-top: 20px;
-  position: relative;
-  left: 50%;
 }
 
 .user-detail-button:hover,
 .users-back-button:hover,
-.see-all-posts:hover {
-  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
-  background: white;
-  color: #1d6346;
-  transform: scale(1.2);
-}
-
-.post-detail-button {
-  margin-top: 20px;
-  padding: 5px;
-  width: 50px;
-  background-color: rgb(163, 184, 163);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 1s;
-}
-
+.see-all-posts:hover,
 .post-detail-button:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
