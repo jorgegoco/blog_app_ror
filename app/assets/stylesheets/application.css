@@ -63,7 +63,7 @@ body {
 }
 
 .post-detail-button {
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .bio {
@@ -76,6 +76,15 @@ body {
 
 .post {
   padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+
+.commentsandlikes {
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .post-detail {
