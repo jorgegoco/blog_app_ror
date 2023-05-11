@@ -169,7 +169,8 @@ body {
   height: 150px;
 }
 
-.post-form input[type="submit"] {
+.post-form input[type="submit"],
+.likes-form input[type="submit"] {
   padding: 5px;
   background-color: rgb(127, 210, 127);
   border-radius: 4px;
@@ -209,7 +210,8 @@ body {
 .button-sign-up:hover,
 .button-password:hover,
 .new-post-detail-button:hover,
-.post-form input[type="submit"]:hover {
+.post-form input[type="submit"]:hover,
+.likes-form input[type="submit"]:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
   color: #1d6346;
