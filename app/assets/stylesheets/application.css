@@ -164,9 +164,7 @@ body {
 }
 
 .new-post-detail-button {
-  margin-top: 20px;
-  position: relative;
-  left: 50%;
+  margin: 20px 0 50px 0;
 }
 
 .button-log-in:hover,
