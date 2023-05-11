@@ -1,24 +1,28 @@
-<%= link_to "Back", "/users/#{@user.id}/" %>
-<% if @user.nil? %>
-<p>user not found</p>
-<% else %>
+<%= link_to "/users" do %>
+  <button class="users-back-button">Back to list of users</button>
+<% end %>
+
 <%= render partial: "shared/user", locals: { user: @user } %>
-<div>
-  <% @posts.each do |post| %>
-    <%= render partial: "shared/post", locals: { post: post } %>
-      <div class="comment">
-        <% post.five_recent_comments.each do |comment| %>
-          <p><%= comment.author.name %>: <%= comment.text %></p>
-        <% end %>
-      </div>
-      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
-        <button class="post-detail-button">Detail</button>
-      <% end %>
-  <% end %>
-</div> 
-  <% if current_user == @user %>
+<br>
+<br>
+<br>
+
+<% @posts.each do |post| %>
+  <%= render partial: "shared/post", locals: { post: post } %>
+  <div class="comment">
+    <% post.five_recent_comments.each do |comment| %>
+      <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% end %>
+    <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+      <button class="post-detail-button">Detail</button>
+    <% end %>
+    <div class="dashed-line"></div>
+  </div>
+<% end %>  
+<% if current_user == @user %>
+  <div class="new-post">
     <%= link_to new_user_post_path(user_id: @user.id) do %>
       <button class="new-post-detail-button">New Post</button>
-    <% end %>       
-  <% end %>
+    <% end %> 
+  </div>      
 <% end %>

@@ -1,35 +1,33 @@
-<%= link_to "Back", "/users/#{@user.id}/posts/" %>
-<% if @user.nil? %>
-  <p>user not found</p>
-<% else %>
-  <% if @post.nil? %>
-    <p>post not found for user: 
-    <%= @user.name %></p>
-  <% else %>
-  <div class="post-detail">
-    <h3>Post <%= @post.title %> by <%= @user.name %></h3>
-    <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
-    </div>
-    <p class="post-detail-text"><%= @post.text %></p>
-    <br>
+<%= link_to "/users/#{@user.id}/posts/" do %>
+  <button class="post-detail-button">Back</button>
+<% end %>
+
+<%= render partial: "shared/user", locals: { user: @user } %>
+<br>
+<br>
+<br>
+<%= render partial: "shared/post", locals: { post: @post } %>
+
+<% if @post.author.id != current_user.id %>
+  <div class="likes-form">  
     <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" do |f| %>
       <%= f.submit 'Like' %>
     <%end%>
-    <br>
-    <div class="comment">
-        <% @comments.each do |comment| %>
-          <p><%= comment.author.name %>: <%= comment.text %></p>
-          <% if can? :destroy, comment %>
-          <%= link_to "Delete", user_post_path(@post.author.id, @post.id), data: {
+  </div>
+<% end %>
+
+<div class="comment">
+  <% @comments.each do |comment| %>
+    <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% if can? :destroy, comment %>
+      <%= link_to "Delete", user_post_path(@post.author.id, @post.id), data: {
             turbo_method: :delete,
             turbo_confirm: "Are you sure?"
           }, class: "delete-comment-button"
-          %>
-      <% end %>
-        <% end %>
-    </div>
-    <% if can? :destroy, @post %> 
-    <%= button_to "Delete Post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false }, class: "delete-post-button"%>
+      %>
+    <% end %>
   <% end %>
-  <% end %>  
+</div>
+<% if can? :destroy, @post %> 
+  <%= button_to "Delete Post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false }, class: "delete-post-button"%>
 <% end %>
