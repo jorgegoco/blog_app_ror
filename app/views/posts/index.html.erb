@@ -20,7 +20,7 @@
   </div>
 <% end %>  
 <% if current_user == @user %>
-  <div class="post-detail">
+  <div class="new-post">
     <%= link_to new_user_post_path(user_id: @user.id) do %>
       <button class="new-post-detail-button">New Post</button>
     <% end %> 

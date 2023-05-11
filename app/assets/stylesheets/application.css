@@ -88,8 +88,6 @@ body {
 
 .post-detail {
   padding-top: 50px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .dashed-line {
@@ -99,11 +97,6 @@ body {
 
 .post-detail-text {
   padding: 50px 0;
-}
-
-.post-form {
-  text-align: center;
-  margin-top: 100px;
 }
 
 .comment-form {
@@ -134,7 +127,8 @@ body {
 
 .log-in-container,
 .sign-up-container,
-.forgot-password-container {
+.forgot-password-container,
+.post-form {
   margin: auto;
   margin-top: 50px;
   padding: 20px;
@@ -144,12 +138,56 @@ body {
   box-shadow: 5px 10px;
 }
 
+.post-form {
+  width: 80%;
+  margin-top: 100px;
+}
+
+.post-form h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.post-form label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.post-form textarea {
+  height: 150px;
+}
+
+.post-form input[type="submit"] {
+  padding: 5px;
+  background-color: rgb(127, 210, 127);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
 .field {
   margin: 20px 0;
 }
 
 .actions {
   margin: 20px 0;
+}
+
+.new-post {
+  padding-top: 50px;
+  text-align: center;
 }
 
 .button-log-in,
@@ -170,7 +208,8 @@ body {
 .button-log-in:hover,
 .button-sign-up:hover,
 .button-password:hover,
-.new-post-detail-button:hover {
+.new-post-detail-button:hover,
+.post-form input[type="submit"]:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
   color: #1d6346;
