@@ -3,6 +3,9 @@
 <% end %>
 
 <%= render partial: "shared/user", locals: { user: @user } %>
+<br>
+<br>
+<br>
 
 <% @posts.each do |post| %>
   <%= render partial: "shared/post", locals: { post: post } %>
@@ -13,6 +16,7 @@
     <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
       <button class="post-detail-button">Detail</button>
     <% end %>
+    <div class="dashed-line"></div>
   </div>
 <% end %>  
 <% if current_user == @user %>
