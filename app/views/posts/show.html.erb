@@ -28,6 +28,13 @@
     <% end %>
   <% end %>
 </div>
+
+<div class="new-post">
+    <%= link_to new_user_post_comment_path(user_id: @user.id, post_id: @post.id) do %>
+      <button class="add-comment-button">Add comment</button>
+    <% end %> 
+  </div>   
+
 <% if can? :destroy, @post %> 
   <%= button_to "Delete Post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false }, class: "delete-post-button"%>
 <% end %>
