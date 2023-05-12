@@ -39,22 +39,20 @@ body {
   column-gap: 100px;
 }
 
-.profile-img {
+.user-profile-img {
   width: 200px;
   height: 100px;
   border: 1px solid black;
   box-shadow: 5px 10px;
 }
 
-.user p {
+.user-number-posts {
   margin-left: auto;
   margin-right: 200px;
 }
 
-.user-detail-button,
-.post-detail-button {
+.nav-button {
   padding: 5px;
-  width: 50px;
   margin: 50px 0 50px 100px;
   background-color: rgb(163, 184, 163);
   border-radius: 4px;
@@ -62,11 +60,24 @@ body {
   transition: transform 1s;
 }
 
-.post-detail-button {
+.post-detail-button,
+.back-to-posts-button {
   margin: 10px 0 0 0;
 }
 
-.bio {
+.users-back-button,
+.see-all-posts-button {
+  margin: 20px 0 50px 0;
+}
+
+.nav-button:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
+}
+
+.user-bio {
   margin: 30px 0;
   padding: 5px;
   border: 1px solid black;
@@ -81,13 +92,9 @@ body {
   row-gap: 10px;
 }
 
-.commentsandlikes {
+.post-commentsandlikes {
   font-weight: bold;
   margin-top: 20px;
-}
-
-.post-detail {
-  padding-top: 50px;
 }
 
 .dashed-line {
@@ -95,68 +102,51 @@ body {
   margin: 10px 0;
 }
 
-.post-detail-text {
-  padding: 50px 0;
+.see-all-posts-button-container {
+  margin-top: 60px;
 }
 
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 10px;
+  margin-bottom: 30px;
+}
+
+.post-form,
 .comment-form {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.users-back-button,
-.see-all-posts {
-  margin: 20px 0 50px 0;
-  padding: 5px;
-  width: 150px;
-  background-color: rgb(163, 184, 163);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 1s;
-}
-
-.user-detail-button:hover,
-.users-back-button:hover,
-.see-all-posts:hover,
-.post-detail-button:hover {
-  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
-  background: white;
-  color: #1d6346;
-  transform: scale(1.2);
-}
-
-.log-in-container,
-.sign-up-container,
-.forgot-password-container,
-.post-form {
+  width: 80%;
   margin: auto;
   margin-top: 50px;
   padding: 20px;
   text-align: center;
-  width: 40%;
   border: 1px solid black;
   box-shadow: 5px 10px;
 }
 
-.post-form {
-  width: 80%;
-  margin-top: 100px;
+.comment-form {
+  width: 40%;
 }
 
-.post-form h1 {
+.post-form h1,
+.comment-form h1 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.post-form label {
+.post-form label,
+.comment-form label {
   font-size: 18px;
   display: block;
   margin-bottom: 10px;
 }
 
 .post-form input[type="text"],
-.post-form textarea {
+.post-form textarea,
+.comment-form textarea {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -165,17 +155,61 @@ body {
   margin-bottom: 20px;
 }
 
-.post-form textarea {
+.post-form textarea,
+.comment-form textarea {
   height: 150px;
 }
 
+.new-post {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.new-post-detail-button,
+.add-comment-button,
+.delete-post-button,
 .post-form input[type="submit"],
-.likes-form input[type="submit"] {
+.likes-form input[type="submit"],
+.comment-form input[type="submit"] {
   padding: 5px;
   background-color: rgb(127, 210, 127);
   border-radius: 4px;
   cursor: pointer;
   transition: transform 1s;
+}
+
+.new-post-detail-button,
+.add-post-button,
+.delete-post-button {
+  margin: 20px 0 50px 0;
+}
+
+.delete-post-button {
+  background-color: red;
+}
+
+.new-post-detail-button:hover,
+.add-comment-button:hover,
+.delete-post-button:hover,
+.post-form input[type="submit"]:hover,
+.likes-form input[type="submit"]:hover,
+.comment-form input[type="submit"]:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
+}
+
+.log-in-container,
+.sign-up-container,
+.forgot-password-container {
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  width: 40%;
+  border: 1px solid black;
+  box-shadow: 5px 10px;
 }
 
 .field {
@@ -186,15 +220,9 @@ body {
   margin: 20px 0;
 }
 
-.new-post {
-  padding-top: 50px;
-  text-align: center;
-}
-
 .button-log-in,
 .button-sign-up,
-.button-password,
-.new-post-detail-button {
+.button-password {
   padding: 5px;
   background-color: rgb(127, 210, 127);
   border-radius: 4px;
@@ -202,16 +230,9 @@ body {
   transition: transform 1s;
 }
 
-.new-post-detail-button {
-  margin: 20px 0 50px 0;
-}
-
 .button-log-in:hover,
 .button-sign-up:hover,
-.button-password:hover,
-.new-post-detail-button:hover,
-.post-form input[type="submit"]:hover,
-.likes-form input[type="submit"]:hover {
+.button-password:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
   color: #1d6346;
@@ -229,9 +250,6 @@ body {
   width: 90%;
 }
 
-.delete-post-button,
 .delete-comment-button {
-  margin-top: 50px;
-  padding: 5px;
   color: red;
 }
