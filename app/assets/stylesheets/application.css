@@ -106,47 +106,38 @@ body {
   margin-top: 60px;
 }
 
-.post-detail-text {
-  padding: 50px 0;
-}
-
-.comment-form {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.log-in-container,
-.sign-up-container,
-.forgot-password-container,
-.post-form {
+.post-form,
+.comment-form{
+  width: 80%;
   margin: auto;
   margin-top: 50px;
   padding: 20px;
   text-align: center;
-  width: 40%;
   border: 1px solid black;
   box-shadow: 5px 10px;
 }
 
-.post-form {
-  width: 80%;
-  margin-top: 100px;
+.comment-form {
+  width: 40%;
 }
 
-.post-form h1 {
+.post-form h1,
+.comment-form h1 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.post-form label {
+.post-form label,
+.comment-form label {
   font-size: 18px;
   display: block;
   margin-bottom: 10px;
 }
 
 .post-form input[type="text"],
-.post-form textarea {
+.post-form textarea,
+.comment-form textarea {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -155,25 +146,9 @@ body {
   margin-bottom: 20px;
 }
 
-.post-form textarea {
+.post-form textarea,
+.comment-form textarea {
   height: 150px;
-}
-
-.post-form input[type="submit"],
-.likes-form input[type="submit"] {
-  padding: 5px;
-  background-color: rgb(127, 210, 127);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 1s;
-}
-
-.field {
-  margin: 20px 0;
-}
-
-.actions {
-  margin: 20px 0;
 }
 
 .new-post {
@@ -181,10 +156,10 @@ body {
   text-align: center;
 }
 
-.button-log-in,
-.button-sign-up,
-.button-password,
-.new-post-detail-button {
+.new-post-detail-button,
+.post-form input[type="submit"],
+.likes-form input[type="submit"],
+.comment-form input[type="submit"] {
   padding: 5px;
   background-color: rgb(127, 210, 127);
   border-radius: 4px;
@@ -196,12 +171,50 @@ body {
   margin: 20px 0 50px 0;
 }
 
-.button-log-in:hover,
-.button-sign-up:hover,
-.button-password:hover,
 .new-post-detail-button:hover,
 .post-form input[type="submit"]:hover,
-.likes-form input[type="submit"]:hover {
+.likes-form input[type="submit"]:hover,
+.comment-form input[type="submit"]:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
+}
+
+
+.log-in-container,
+.sign-up-container,
+.forgot-password-container {
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  width: 40%;
+  border: 1px solid black;
+  box-shadow: 5px 10px;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.actions {
+  margin: 20px 0;
+}
+
+.button-log-in,
+.button-sign-up,
+.button-password {
+  padding: 5px;
+  background-color: rgb(127, 210, 127);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.button-log-in:hover,
+.button-sign-up:hover,
+.button-password:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
   color: #1d6346;
