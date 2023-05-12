@@ -1,5 +1,5 @@
 <%= link_to "/users" do %>
-  <button class="users-back-button">Back to list of users</button>
+  <button class="users-back-button nav-button">Back to list of users</button>
 <% end %>
 
 <%= render partial: "shared/user", locals: { user: @user } %>
@@ -14,7 +14,7 @@
       <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
     <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
-      <button class="post-detail-button">Detail</button>
+      <button class="post-detail-button nav-button">Detail</button>
     <% end %>
     <div class="dashed-line"></div>
   </div>

@@ -39,22 +39,20 @@ body {
   column-gap: 100px;
 }
 
-.profile-img {
+.user-profile-img {
   width: 200px;
   height: 100px;
   border: 1px solid black;
   box-shadow: 5px 10px;
 }
 
-.user p {
+.user-number-posts {
   margin-left: auto;
   margin-right: 200px;
 }
 
-.user-detail-button,
-.post-detail-button {
+.nav-button {
   padding: 5px;
-  width: 50px;
   margin: 50px 0 50px 100px;
   background-color: rgb(163, 184, 163);
   border-radius: 4px;
@@ -62,11 +60,24 @@ body {
   transition: transform 1s;
 }
 
-.post-detail-button {
+.post-detail-button,
+.back-to-posts-button {
   margin: 10px 0 0 0;
 }
 
-.bio {
+.users-back-button,
+.see-all-posts-button {
+  margin: 20px 0 50px 0;
+}
+
+.nav-button:hover {
+  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
+  background: white;
+  color: #1d6346;
+  transform: scale(1.2);
+}
+
+.user-bio {
   margin: 30px 0;
   padding: 5px;
   border: 1px solid black;
@@ -81,18 +92,18 @@ body {
   row-gap: 10px;
 }
 
-.commentsandlikes {
+.post-commentsandlikes {
   font-weight: bold;
   margin-top: 20px;
-}
-
-.post-detail {
-  padding-top: 50px;
 }
 
 .dashed-line {
   border-bottom: 1px dashed black;
   margin: 10px 0;
+}
+
+.see-all-posts-button-container {
+  margin-top: 60px;
 }
 
 .post-detail-text {
@@ -102,27 +113,6 @@ body {
 .comment-form {
   text-align: center;
   margin-top: 100px;
-}
-
-.users-back-button,
-.see-all-posts {
-  margin: 20px 0 50px 0;
-  padding: 5px;
-  width: 150px;
-  background-color: rgb(163, 184, 163);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 1s;
-}
-
-.user-detail-button:hover,
-.users-back-button:hover,
-.see-all-posts:hover,
-.post-detail-button:hover {
-  box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
-  background: white;
-  color: #1d6346;
-  transform: scale(1.2);
 }
 
 .log-in-container,
