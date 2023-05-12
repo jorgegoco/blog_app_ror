@@ -106,6 +106,14 @@ body {
   margin-top: 60px;
 }
 
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 10px;
+  margin-bottom: 30px;
+}
 .post-form,
 .comment-form{
   width: 80%;
@@ -157,6 +165,8 @@ body {
 }
 
 .new-post-detail-button,
+.add-comment-button,
+.delete-post-button,
 .post-form input[type="submit"],
 .likes-form input[type="submit"],
 .comment-form input[type="submit"] {
@@ -167,11 +177,19 @@ body {
   transition: transform 1s;
 }
 
-.new-post-detail-button {
+.new-post-detail-button,
+.add-post-button,
+.delete-post-button {
   margin: 20px 0 50px 0;
 }
 
+.delete-post-button {
+  background-color: red;
+}
+
 .new-post-detail-button:hover,
+.add-comment-button:hover,
+.delete-post-button:hover,
 .post-form input[type="submit"]:hover,
 .likes-form input[type="submit"]:hover,
 .comment-form input[type="submit"]:hover {
@@ -232,9 +250,6 @@ body {
   width: 90%;
 }
 
-.delete-post-button,
 .delete-comment-button {
-  margin-top: 50px;
-  padding: 5px;
   color: red;
 }
