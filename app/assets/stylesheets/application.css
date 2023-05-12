@@ -114,8 +114,9 @@ body {
   row-gap: 10px;
   margin-bottom: 30px;
 }
+
 .post-form,
-.comment-form{
+.comment-form {
   width: 80%;
   margin: auto;
   margin-top: 50px;
@@ -198,7 +199,6 @@ body {
   color: #1d6346;
   transform: scale(1.2);
 }
-
 
 .log-in-container,
 .sign-up-container,
