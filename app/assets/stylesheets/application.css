@@ -70,6 +70,11 @@ body {
   margin: 20px 0 50px 0;
 }
 
+.log-out-button {
+  margin: 20px 0 0 0;
+  background-color: yellow;
+}
+
 .nav-button:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
