@@ -205,9 +205,7 @@ body {
   transform: scale(1.2);
 }
 
-.log-in-container,
-.sign-up-container,
-.forgot-password-container {
+.devise-container {
   margin: auto;
   margin-top: 50px;
   padding: 20px;
@@ -225,9 +223,7 @@ body {
   margin: 20px 0;
 }
 
-.button-log-in,
-.button-sign-up,
-.button-password {
+.devise-button {
   padding: 5px;
   background-color: rgb(127, 210, 127);
   border-radius: 4px;
@@ -235,19 +231,14 @@ body {
   transition: transform 1s;
 }
 
-.button-log-in:hover,
-.button-sign-up:hover,
-.button-password:hover {
+.devise-button:hover {
   box-shadow: 0 0 10px 10px rgba(12, 73, 48, 0.24);
   background: white;
   color: #1d6346;
   transform: scale(1.2);
 }
 
-.link-log-in,
-.link-sign-up,
-.link-forgot-password,
-.link-confirmation {
+.devise-link {
   color: black;
 }
 
