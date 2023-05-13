@@ -8,19 +8,23 @@
 <br>
 <%= render partial: "shared/post", locals: { post: @post } %>
 
+
 <% if @post.author.id != current_user.id %>
-  <div class="likes-form">  
-    <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" do |f| %>
-      <%= f.submit 'Like' %>
-    <%end%>
-  </div>
+  <% existing_like = Like.find_by(author_id: current_user.id, post_id: @post.id) %>
+  <% unless existing_like %>
+    <div class="likes-form">
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" do |f| %>
+        <%= f.submit 'Like' %>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
 
 <div class="comment">
   <% @comments.each do |comment| %>
     <p><%= comment.author.name %>: <%= comment.text %></p>
     <% if can? :destroy, comment %>
-      <%= link_to "Delete", user_post_path(@post.author.id, @post.id), data: {
+      <%= link_to "Delete comment", user_post_comment_path(comment.author.id, @post.id, comment), data: {
             turbo_method: :delete,
             turbo_confirm: "Are you sure?"
           }, class: "delete-comment-button"
