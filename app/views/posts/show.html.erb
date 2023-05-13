@@ -8,12 +8,16 @@
 <br>
 <%= render partial: "shared/post", locals: { post: @post } %>
 
+
 <% if @post.author.id != current_user.id %>
-  <div class="likes-form">  
-    <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" do |f| %>
-      <%= f.submit 'Like' %>
-    <%end%>
-  </div>
+  <% existing_like = Like.find_by(author_id: current_user.id, post_id: @post.id) %>
+  <% unless existing_like %>
+    <div class="likes-form">
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" do |f| %>
+        <%= f.submit 'Like' %>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
 
 <div class="comment">
