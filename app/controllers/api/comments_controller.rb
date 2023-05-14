@@ -1,15 +1,8 @@
 class Api::CommentsController < Api::ApplicationController
-  def create
+  def index
     @post = Post.find(params[:post_id])
-    @comment = Comment.new(comment_params)
-    @comment.post = @post
-    @comment.author = current_user
-    render json: @comment
-  end
+    @comments = @post.comments
 
-  private
-
-  def comment_params
-    params.require(:comment).permit(:text)
+    render json: @comments
   end
 end

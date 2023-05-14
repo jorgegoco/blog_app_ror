@@ -26,9 +26,13 @@
 # 📖 Blog app <a name="about-project"></a>
 
 
-**The Blog app** is a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+**The Blog app** is a simple blog app that allows users to create an account where they can create posts, see other people's posts and also leave a like or a comment to others posts. In addition if they are the owners of posts or comments, they can remove them, giving them privilege over their inputs. Built with Ruby on Rails.
 
 ## 🛠 Built With <a name="built-with"></a>
+
+- Ruby on Rails.
+
+- PostgreSQL.
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -36,14 +40,14 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -82,24 +86,30 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
+```
+  git clone git@github.com:jorgegoco/blog_app_ror.git
 
-- git clone git@github.com:jorgegoco/blog_app_ror.git
-- cd blog-app
+  cd blog_app_ror
+
+  bundle install
+```
 
 
 ### Usage
 
 To run the project, execute the following command:
-
-- rails server
+```
+rails server
+```
 
 ### Run tests
 
 To run tests, run the following command:
+```
+rails db:seed RAILS_ENV=test
 
-- `rails db:seed RAILS_ENV=test`
-
-- `rspec`
+rspec
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
