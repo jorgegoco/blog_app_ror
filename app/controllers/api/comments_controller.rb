@@ -5,5 +5,4 @@ class Api::CommentsController < Api::ApplicationController
 
     render json: @comments
   end
-
 end
