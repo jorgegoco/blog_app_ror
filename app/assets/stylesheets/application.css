@@ -249,3 +249,50 @@ body {
 .delete-comment-button {
   color: red;
 }
+
+@media (max-width: 768px) {
+  .user {
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .user-number-posts {
+    margin: 0;
+  }
+
+  .nav-button {
+    margin: 10px 0 50px 0;
+  }
+
+  .post-form,
+  .comment-form {
+    width: 100%;
+  }
+
+  .post-form textarea,
+  .comment-form textarea {
+    height: 100px;
+  }
+
+  .new-post-detail-button,
+  .add-comment-button,
+  .delete-post-button,
+  .post-form input[type="submit"],
+  .likes-form input[type="submit"],
+  .comment-form input[type="submit"] {
+    margin: 20px 0;
+  }
+
+  .new-post-detail-button,
+  .add-post-button,
+  .delete-post-button {
+    margin: 20px 0;
+  }
+
+  .devise-container {
+    width: 100%;
+  }
+}
