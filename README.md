@@ -26,7 +26,7 @@
 # 📖 Blog app <a name="about-project"></a>
 
 
-**The Blog app** is a simple blog app that allows users to create an account where they can create posts, see other people's posts and also leave a like or a comment to others posts. In addition if they are the owners of posts or comments, they can remove them, giving them privilege over their inputs. Built with Ruby on Rails.
+**The Blog app**  is a simple and user-friendly platform that allows you to create an account, write posts, read other people’s posts, and interact with them by leaving likes or comments. You can also manage your own posts and comments by editing or deleting them. Built with Ruby on Rails and PostgreSQL as database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -62,9 +62,9 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **Posts creation by users**
-- **Add comments to posts**
-- **Add likes to posts**
+- **User-friendly interface**
+- **Ability to create and manage posts and comments**
+- **Interact with other users by leaving likes or comments**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,10 +78,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- Ruby installed in your machine
-
-- `gem install rails` (Ruby gem)
-
+- Ruby, Rails, and PostgreSQL installed in your terminal, or run in with docker
 
 ### Setup
 
@@ -95,20 +92,22 @@ Clone this repository to your desired folder:
 ```
 
 
+### Install
+
+Install this project with:
+
+```
+  bundle install 
+```
+
 ### Usage
 
-To run the project, execute the following command:
-```
-rails server
-```
+To run the project, execute the following commands:
 
-### Run tests
-
-To run tests, run the following command:
 ```
-rails db:seed RAILS_ENV=test
+  rails db:create db:migrate db:seed
 
-rspec
+  rails server
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -138,8 +137,8 @@ rspec
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Authentication with Devise gem**
-- [ ] **Add authorization rules**
+- [ ] **Integration with social media platforms to share posts and increase engagement**
+- [ ] **Option to add images or videos to posts**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
